@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: #3b0066;
+  font-family: 'Arial Black', Impact, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+#game-container {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #fbd000;
+  background-color: #000;
+}
+
+#controls-hint {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #ffeb3b;
+  pointer-events: none;
+  z-index: 5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* OVERLAY DE MENU */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 5, 35, 0.92);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.overlay h1 {
+  font-size: 48px;
+  color: #fbd000;
+  text-shadow: 3px 3px 0 #d32f2f, -2px -2px 0 #000;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #000;
+  background: #fbd000;
+  border: 4px solid #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b79200;
+  transition: all 0.1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #b79200;
+  background: #ffe14d;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b79200;
+}
+
+.btn.alt {
+  background: #2196f3;
+  color: #fff;
+  box-shadow: 0 6px 0 #1565c0;
+}
+
+.btn.alt:hover {
+  background: #42a5f5;
+  box-shadow: 0 8px 0 #1565c0;
+}
+
+.btn.alt:active {
+  box-shadow: 0 2px 0 #1565c0;
+}
